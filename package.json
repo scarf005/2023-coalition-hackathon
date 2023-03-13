@@ -1,0 +1,19 @@
+{
+  "name": "bolt-hello-world-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.12.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "tsx": "^3.12.5"
+  }
+}
