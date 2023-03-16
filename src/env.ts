@@ -9,7 +9,7 @@ const envFileSchema = z
 		SLACK_BOT_TOKEN: z.string(),
 		SLACK_SIGNING_SECRET: z.string(),
 		SLACK_APP_TOKEN: z.string(),
-		OPENAI_API_KEY: z.string(),
+		// OPENAI_API_KEY: z.string(),
 		PORT: z.string(),
 	})
 	.strict()
@@ -33,6 +33,6 @@ export const {
 	SLACK_BOT_TOKEN,
 	SLACK_SIGNING_SECRET,
 	SLACK_APP_TOKEN,
-	OPENAI_API_KEY,
+	// OPENAI_API_KEY,
 	port,
 } = env
