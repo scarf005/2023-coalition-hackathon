@@ -20,7 +20,7 @@ export const createApp = ({
 
 /** app.message에 여러 함수 등록하기 */
 export const registerHooks = (app: App, hooks: MessageHook[]) => {
-	hooks.forEach(({ trigger: message, fn }) => {
-		app.message(message, fn)
+	hooks.forEach(({ trigger, fn }) => {
+		app.message(trigger, fn)
 	})
 }
