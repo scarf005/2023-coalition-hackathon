@@ -88,10 +88,6 @@
 - 어디 있니? 뉴진스의 하입보이요 🎧
 - 지금 당장 [어디있니](https://www.where42.kr/Login%7C%EC%96%B4%EB%94%94%EC%9E%88%EB%8B%88)를 방문해 보세요!
 
-### 42Peer
-- 동료학습을 위한 커뮤니티, 42peer
-- Don't Panic! 혼자서 42를 여행하지 말 것!
-- 지금 당장 [42Peer](https://42peer.oopy.io/%7C42Peer)를 방문해 보세요!
 
 
 <!-- ### 42gg -->
@@ -120,6 +116,11 @@
 
 <!-- ### 42world -->
 
+### 42Peer
+- 동료학습을 위한 커뮤니티, 42peer
+- Don't Panic! 혼자서 42를 여행하지 말 것!
+- 지금 당장 [42Peer](https://42peer.oopy.io/%7C42Peer)를 방문해 보세요!
+
 ### 팔만코딩경
 - 개발과 관련된 모든 것들을 이곳에 모두 모아!
 - 모두의 도서관을 만들어 보아요!
@@ -131,7 +132,7 @@
 ## 기타
 ### 외부인 초대
 - 작성일(2023.03.16) 기준 서초는 외부인 출입이 제한됩니다.
-- 외부인 출입 신청은 [구글폼] 작성 후 `42seoul_club_yeyak` 채널에 글을 게시해야 합니다.
+- 외부인 출입 신청은 [구글폼](https://docs.google.com/forms/d/e/1FAIpQLSc3JPRoAZ8Z2HiNNniXdp5obWpxiDoJCT2DtKYve4fk4qsJow/viewform) 작성 후 `42seoul_club_yeyak` 채널에 글을 게시해야 합니다.
 - 출입 신청 날짜에서 최소 하루 전날 신청해야 하며, 승인은 스태프의 업무시간에 이루어집니다.
 
 ### 42 베네핏
