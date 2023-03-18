@@ -1,9 +1,3 @@
-/** "documentList[]"에서 원하는 "keyword"의 "content"를 읽는 함수
- * 
- * @returns "keyword"에 해당하는 내용
- * @error []빈 문자열 출력
- */
-
 type Doc = {
     keywords: string[],
     contents: string[]
