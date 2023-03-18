@@ -3,8 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   '@slack/bolt': ^3.12.2
   '@slack/web-api': ^6.8.1
-  chatgpt: ^5.0.10
+  chatgpt: ^5.1.1
   dotenv: ^16.0.3
+  outdent: ^0.8.0
+  promise-all-properties: ^3.0.6
   rome: ^11.0.0
   tsx: ^3.12.5
   type-fest: ^3.6.1
@@ -13,8 +15,10 @@ specifiers:
 dependencies:
   '@slack/bolt': 3.12.2
   '@slack/web-api': 6.8.1
-  chatgpt: 5.0.10
+  chatgpt: 5.1.1
   dotenv: 16.0.3
+  outdent: 0.8.0
+  promise-all-properties: 3.0.6
   zod: 3.21.4
 
 devDependencies:
@@ -640,8 +644,8 @@ packages:
       supports-color: 5.5.0
     dev: false
 
-  /chatgpt/5.0.10:
-    resolution: {integrity: sha512-R3vtPlhCapFLkDXED0Cnt1DBcOZAXygr0M5U5kbSI0Fwm4uDQmc7qoIOnr17rd8eaa0JO/UDOevJdEWvd079qA==}
+  /chatgpt/5.1.1:
+    resolution: {integrity: sha512-ml1u4/KqXdAKfaRwqE0uvRTh5JoRgosstH2LF4PpsawG7MUtIzAVaE/MMEAaV02uGbOlAH4IgKI3mDHkQ0Dmlw==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
@@ -1479,6 +1483,10 @@ packages:
       ee-first: 1.1.1
     dev: false
 
+  /outdent/0.8.0:
+    resolution: {integrity: sha512-KiOAIsdpUTcAXuykya5fnVVT+/5uS0Q1mrkRHcF89tpieSmY33O/tmc54CqwA+bfhbtEfZUNLHaPUiB9X3jt1A==}
+    dev: false
+
   /p-cancelable/1.1.0:
     resolution: {integrity: sha512-s73XxOZ4zpt1edZYZzvhqFa6uvQc1vwUa0K0BdtIZgQMAJj9IbebH+JkgKZc9h+B05PKHLOTl4ajG1BmNrVZlw==}
     engines: {node: '>=6'}
@@ -1564,6 +1572,10 @@ packages:
     resolution: {integrity: sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==}
     dependencies:
       semver-compare: 1.0.0
+    dev: false
+
+  /promise-all-properties/3.0.6:
+    resolution: {integrity: sha512-A0pNGlCCtDdSePRl0ZDRBWxAETadVkv9ZxMd1ije+dkKYOV5Ji8NcjqBIzmiDYIK8ZWk5aZoNto6NhnGMhJpxQ==}
     dev: false
 
   /promise.allsettled/1.0.6:
