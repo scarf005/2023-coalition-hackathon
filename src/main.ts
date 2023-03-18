@@ -1,14 +1,14 @@
 import { env, port } from "./env"
 import { createApp, registerHooks } from "./app"
-import { announcementHook, echoHook } from "./hooks"
+import { announcementHook, keywordHook } from "./hooks"
 import { readKeywordFile } from "./readYaml"
 
 const main = async () => {
 	console.log("⚡️ 앱 실행 준비 중...")
-	const keywordfile = await readKeywordFile()
 	const app = createApp(env)
+	const docs = await readKeywordFile()
 
-	registerHooks(app, [echoHook, announcementHook])
+	registerHooks(app, [announcementHook, keywordHook(docs)])
 
 	await app.start(port)
 
