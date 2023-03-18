@@ -25,32 +25,46 @@ type MessageHookArgs = Omit<MessageHookRawArgs, "message"> & {
 type UserOrBotMessage = MessageHookRawArgs["message"]
 
 /** 특정 메시지를 받을 때마다 자동으로 실행되는 후크 */
-type MessageHookConstructor = SetOptional<
-	{
-		/** 사용자 메시지 안에 해당 문자열이 있으면 함수를 실행합니다 */
-		trigger: MessageHookTrigger
+type MessageHookConstructor = Partial<{
+	/** 사용자 메시지 안에 해당 문자열이 있으면 함수를 실행합니다 */
+	trigger: MessageHookTrigger
 
-		/** 조건 만족 시 실행되는 비동기 함수 */
-		fn: (args: MessageHookArgs) => Promise<void>
-	},
-	"trigger"
->
+	/**
+	 * 특정 채널을 제외합니다.
+	 * includeChannels보다 우선순위가 높습니다.
+	 */
+	excludeChannels: string[]
+
+	/** 특정 채널에서만 실행합니다. */
+	includeChannels: string[]
+}> & {
+	/** 조건 만족 시 실행되는 비동기 함수 */
+	fn: (args: MessageHookArgs) => Promise<void>
+}
 
 /** bolt app에 추가 가능한, 후처리가 끝난 후크입니다.
  *
  * 직접 사용해서는 안됩니다. @see {@link createHook}
  */
-export type MessageHook = Required<
-	Omit<MessageHookConstructor, "fn"> & {
-		fn: (args: MessageHookRawArgs) => Promise<void>
-	}
->
+export type MessageHook = Required<Pick<MessageHookConstructor, "trigger">> & {
+	fn: (args: MessageHookRawArgs) => Promise<void>
+}
 
 /** 후크로 받은 메시지가 유저 메시지인지 확인합니다 */
 const isUserMessage = (
 	message: UserOrBotMessage,
-): message is GenericMessageEvent => {
-	return message.subtype === undefined
+): message is GenericMessageEvent => message.subtype === undefined
+
+const isAcceptedChannel = (
+	channel: string,
+	excludeChannels: string[],
+	includeChannels: string[],
+) => {
+	if (excludeChannels.includes(channel)) return false
+	if (includeChannels.length > 0 && !includeChannels.includes(channel))
+		return false
+
+	return true
 }
 
 /** 사용자 메시지를 받을 때마다 실행되는 후크를 만듭니다.
@@ -60,10 +74,14 @@ const isUserMessage = (
  */
 export const createHook = ({
 	trigger = /.*/,
+	excludeChannels = [],
+	includeChannels = [],
 	fn,
 }: MessageHookConstructor): MessageHook => {
 	const wrappedFn = async ({ message, ...args }: MessageHookRawArgs) => {
 		if (!isUserMessage(message)) return
+		if (!isAcceptedChannel(message.channel, excludeChannels, includeChannels))
+			return
 
 		await fn({ message, ...args })
 	}
