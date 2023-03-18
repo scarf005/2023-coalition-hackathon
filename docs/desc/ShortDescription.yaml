@@ -1,9 +1,9 @@
 - 키워드: [도움말, help, Help]
   내용:
     - 안녕하세요! 은하수를 여행하는 히치하이커를 위한 안내서가 되고픈 `42bot`입니다!
-    - 사용 할 수 있는 **명령어**는 다음과 같습니다
+    - 사용 할 수 있는 *명령어* 는 다음과 같습니다.
     - `게임기`, `프린터`, `회의실`, `사물함`, `외부인`, `베네핏`, `사이트`, `와이파이`, `도서관`
-    - 자세한 매뉴얼은 <link|여기>를 참고해 주세요!
+    - 자세한 매뉴얼은 <https://github.com/scarf005/2023-coalition-hackathon/blob/main/docs/desc/42BotManual.md|여기>를 참고해 주세요!
 
 - 키워드: [냉장고]
   내용:
@@ -39,7 +39,7 @@
   내용:
   - 2층 1클러스터 회의실 방향 라인에 프린터가 놓인 공간이 있습니다.
   - 프린터 용지는 `#42seoul_staff_pedagogy`에 문의를 남겨주세요.
-  - 프린터기 연결 방법은 <link|여기>를 참고해 주세요.
+  - 프린터기 연결 방법은 <https://github.com/scarf005/2023-coalition-hackathon/blob/main/docs/desc/Printer.md|여기>를 참고해 주세요.
 
 - 키워드: [회의실]
   내용:
@@ -69,25 +69,35 @@
   내용:
   - 작성일(2023.03.16) 기준 베네핏 모음입니다. 4월 중 베네핏 사이트 오픈 예정입니다.
   - apple 학생할인(UNiDAYS), notion 교육, github 학생 등
-  - 자세한 안내는 <link|여기>를 참고해 주세요.
+  - github 학생 계정에서 파생되는 혜택이 다양합니다. (JetBrain, Copilot)
 
 - 키워드: [사이트, 주소]
   내용:
   - 아래 키워드를 입력하시면 웹사이트 주소를 알려드립니다.
   - 팔코!, 42gg!, 모글, 어디있니, 피어!, 하네
 
+- 키워드: [어디있니, where42]
+  내용:
+  - 42서울 실시간 친구 자리 찾기 서비스
+  - "어디 있니? 뉴진스의 하입보이요:headphone:"
+  - 지금 당장 <https://www.where42.kr/Login|어디있니>를 방문해 보세요!
+
+- 키워드: [피어, 42peer, 42Peer, 42피어, 피카츄]
+  - 동료학습을 위한 커뮤니티, 42peer
+  - Don't Panic! 혼자서 42를 여행하지 말 것! 
+  - 지금 당장 <https://42peer.oopy.io/|42Peer>를 방문해 보세요! 
+
 # - 키워드: [팔만코딩경, 팔코]
+# - 키워드: [42월드, 42world, 42World]
 # - 키워드: [42gg, 42GG, 42지지, gg, GG]
-# - 키워드: [모닝글로리, 모글]
-# - 키워드: [어디있니, where42]
-# - 키워드: [피어, 42peer, 42피어, 피카츄]
+# - 키워드: [잼s25, 잼전마켓, 컵라면, 라면]
 # - 키워드: [하네, 42하네, 42hane, 42Hane, 42HANE]
 
 - 키워드: [와이파이, wifi]
   내용:
   - 42Guest 와이파이 비번 = WeL0ve42Seoul
   - 42Seoul 와이파이 아이디/비번 = 인트라아이디/인트라비번
-  - 42Seoul 와이파이는 윈도우10에서 인증서 문제가 있습니다. 자세한 사항은 <https://42born2code.slack.com/files/U01BDF736KV/F04PN4B19FZ/codam_wifi_win10.es.en.cleaned.pdf|여기>를 참고해 주세요
+  - 42Seoul 와이파이는 윈도우10에서 인증서 문제가 있습니다. 자세한 사항은 <https://42born2code.slack.com/files/U01BDF736KV/F04PN4B19FZ/codam_wifi_win10.es.en.cleaned.pdf|여기>를 참고해 주세요.
 
 - 키워드: [도서관, 책]
   내용:
