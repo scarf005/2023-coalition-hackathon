@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/main.ts"
+    "dev": "tsx watch src/main.ts",
+    "check": "rome check src/",
+    "fmt": "rome format src/"
   },
   "keywords": [],
   "author": "",
@@ -12,8 +14,10 @@
   "dependencies": {
     "@slack/bolt": "^3.12.2",
     "@slack/web-api": "^6.8.1",
-    "chatgpt": "^5.0.10",
+    "chatgpt": "^5.1.1",
     "dotenv": "^16.0.3",
+    "outdent": "^0.8.0",
+    "promise-all-properties": "^3.0.6",
     "zod": "^3.21.4"
   },
   "devDependencies": {

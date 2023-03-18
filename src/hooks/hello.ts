@@ -1,4 +1,5 @@
 import { createHook } from "../createHook"
+import { env } from "../env"
 
 const trigger = /안녕|반가워|hello/i
 
@@ -10,10 +11,11 @@ const trigger = /안녕|반가워|hello/i
  */
 export const helloHook = createHook({
 	trigger,
+	excludeChannels: [env.ANNOUNCEMENT_CHANNEL_ID],
 	fn: async ({ message, say }) => {
 		console.log(`Message received: ${message.text}`)
 
-		// <>는 슬랙이 쓰는 변수 표기법, js의 `${값}` 과 비슷함
+		// 참고: https://api.slack.com/reference/surfaces/formatting#mentioning-users
 		await say(`안녕안녕 ${message.user} <@${message.user}>!`)
 	},
 })
