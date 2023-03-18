@@ -74,6 +74,8 @@ export const announcementHook = createHook({
 		const announcement = makeAnnouncement({ channel, permalink, summarized })
 		await Promise.all(users.map(announcement))
 
-		console.log(`Message received: ${text}, permalink: ${permalink}`)
+		console.log(
+			`announcement :: ${users.length}명에게 ${text.length}자 보냄, 링크: ${permalink}`,
+		)
 	},
 })
