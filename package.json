@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/main.ts"
+    "dev": "tsx watch src/main.ts",
+    "check": "rome check src/",
+    "fmt": "rome format src/"
   },
   "keywords": [],
   "author": "",
