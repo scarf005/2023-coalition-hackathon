@@ -8,13 +8,14 @@ export const createApp = ({
 	SLACK_SIGNING_SECRET,
 	SLACK_APP_TOKEN,
 	port,
-}: Env) => new App({
-  token: SLACK_BOT_TOKEN,
-  signingSecret: SLACK_SIGNING_SECRET,
-  socketMode: true,
-  appToken: SLACK_APP_TOKEN,
-  port,
-})
+}: Env) =>
+	new App({
+		token: SLACK_BOT_TOKEN,
+		signingSecret: SLACK_SIGNING_SECRET,
+		socketMode: true,
+		appToken: SLACK_APP_TOKEN,
+		port,
+	})
 
 /** app.message에 여러 함수 등록하기 */
 export const registerHooks = (app: App, hooks: readonly MessageHook[]) => {

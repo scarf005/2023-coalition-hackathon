@@ -34,13 +34,26 @@ const makeAnnouncement =
     `,
 		})
 
-/** OPENAI_API_KEY가 주어지지 않으면 입력받은 공지를 그대로 출력합니다 */
+/** OPENAI_API_KEY가 주어지지 않으면 더미 요약기를 씁니다 */
 const makeSummarizer = (apiKey?: string) => {
 	if (apiKey === undefined) {
+		console.log(
+			"OPENAI_API_KEY가 주어지지 않았습니다. 더미 요약기를 사용합니다.",
+		)
 		return async (text: string) => text.split("\n").slice(0, 3).join("\n")
 	}
 
-	return async (text: string) => (await summarize(apiKey)(text)).text
+	console.log("OPENAI_API_KEY가 주어졌습니다. 요약기를 사용합니다.")
+	const summarizer = summarize(apiKey)
+	return async (text: string) =>
+		summarizer(text).then(
+			(x) =>
+				outdent`
+      ${x.text}
+
+      _이 글은 GPT 3.5가 요약했습니다._
+    `,
+		)
 }
 
 const summarizer = makeSummarizer(env.OPENAI_API_KEY)
@@ -58,9 +71,9 @@ export const announcementHook = createHook({
 			summarized: summarizer(text),
 		})
 
-		console.log(`Message received: ${text}, permalink: ${permalink}`)
-
 		const announcement = makeAnnouncement({ channel, permalink, summarized })
 		await Promise.all(users.map(announcement))
+
+		console.log(`Message received: ${text}, permalink: ${permalink}`)
 	},
 })
