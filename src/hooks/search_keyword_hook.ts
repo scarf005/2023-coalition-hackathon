@@ -1,6 +1,6 @@
 type Doc = {
-	keywords: string[],
-	contents: string[],
+	keywords: string[]
+	contents: string[]
 }
 
 /**

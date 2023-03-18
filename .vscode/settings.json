@@ -1,5 +1,8 @@
 {
-  "[typescript]": { "editor.defaultFormatter": "rome.rome" },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rome.rome"
+  },
 
   "conventionalCommits.gitmoji": false, // 이모지 끄기
   "conventionalCommits.promptBody": false, // 본문 작성 끄기
