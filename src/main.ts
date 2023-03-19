@@ -1,4 +1,4 @@
-import { env, port } from "./env"
+import { env, PORT } from "./env"
 import { createApp, registerHooks } from "./app"
 import { announcementHook, keywordHook } from "./hooks"
 import { readKeywordFile } from "./readYaml"
@@ -10,7 +10,7 @@ const main = async () => {
 
 	registerHooks(app, [announcementHook, keywordHook(docs)])
 
-	await app.start(port)
+	await app.start(PORT)
 
 	console.log("⚡️ 앱 시작!")
 }
