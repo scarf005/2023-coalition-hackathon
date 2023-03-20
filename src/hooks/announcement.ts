@@ -1,26 +1,10 @@
-import { WebClient } from "@slack/web-api"
 import { outdent } from "outdent"
 import promiseAllProperties from "promise-all-properties"
 
 import { createHook } from "../createHook"
 import { summarize } from "../summarize"
 import { env } from "../env"
-
-const client = new WebClient(env.SLACK_BOT_TOKEN)
-
-const userDms = async () => {
-	const result = await client.conversations.list({
-		types: "im",
-		exclude_archived: true,
-		limit: 100,
-	})
-
-	const users = result
-		.channels!.map((x) => x.user)
-		.filter((x): x is string => x !== undefined)
-
-	return users
-}
+import { client, userDms } from "../client"
 
 const makeAnnouncement =
 	({ channel, permalink, summarized }: Record<string, string>) =>
@@ -51,7 +35,7 @@ const makeSummarizer = (apiKey?: string) => {
 				outdent`
       ${x.text}
 
-      _이 글은 GPT 3.5가 요약했습니다._
+      _이 글은 GPT 3.5가 요약했습니다. 요약된 공지에 대해 어떤 책임도 지지 않습니다._
     `,
 		)
 }
