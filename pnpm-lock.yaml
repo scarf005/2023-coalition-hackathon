@@ -8,6 +8,7 @@ specifiers:
   outdent: ^0.8.0
   promise-all-properties: ^3.0.6
   rome: ^11.0.0
+  ts-pattern: ^4.2.1
   tsx: ^3.12.5
   type-fest: ^3.6.1
   yaml: ^2.2.1
@@ -20,6 +21,7 @@ dependencies:
   dotenv: 16.0.3
   outdent: 0.8.0
   promise-all-properties: 3.0.6
+  ts-pattern: 4.2.1
   yaml: 2.2.1
   zod: 3.21.4
 
@@ -1854,6 +1856,10 @@ packages:
   /toidentifier/1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
+    dev: false
+
+  /ts-pattern/4.2.1:
+    resolution: {integrity: sha512-lXCmHZb01QOM9HdCLvisCGUH9ATdKPON9UaUvwe007gJAhuSBhRWIAIowys5QqNxEq6odWctfMIdI96vzjnOMQ==}
     dev: false
 
   /tsscmp/1.0.6:
