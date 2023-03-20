@@ -1,6 +1,7 @@
 services:
   bot:
     build: .
+    restart: always
     ports:
       - "${PORT}:${PORT}"
     env_file:
