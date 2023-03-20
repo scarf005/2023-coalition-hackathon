@@ -5,7 +5,7 @@ import {
 	SlackEventMiddlewareArgs,
 } from "@slack/bolt"
 import { StringIndexed } from "@slack/bolt/dist/types/helpers"
-import type { SetOptional, Simplify } from "type-fest"
+import type { Simplify } from "type-fest"
 
 type MessageHookTrigger = Parameters<App["message"]>[0]
 

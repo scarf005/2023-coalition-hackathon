@@ -1,6 +1,8 @@
 import { config as loadDotenv } from "dotenv"
 import { z } from "zod"
 
+export type Env = z.infer<typeof envFileSchema>
+
 /** .env 파일 내에 반드시 있어야 하는 키값 목록 */
 const envFileSchema = z.object({
 	SLACK_BOT_TOKEN: z.string(),
