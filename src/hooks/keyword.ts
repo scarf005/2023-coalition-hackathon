@@ -14,7 +14,10 @@ export const keywordHook = (docs: Doc[]) =>
 			}
 
 			const contents = searchDocKeyword(docs, text.trim())
-			if (!contents) return
+			if (!contents) {
+        await say(`${text}를 찾을 수 없습니다. 도움말을 참고해주세요.`)
+        return
+      }
 
 			await say(contents.map((x) => `- ${x}`).join("\n"))
 		},
