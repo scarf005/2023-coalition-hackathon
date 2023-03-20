@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
+    volumes:
+      - ./docs/:/app/docs/
